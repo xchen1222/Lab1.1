@@ -3,6 +3,7 @@ public class ControlStucture {
 public static void main(String []args) {
 	FooBarBaz();
 	primePrinter();
+	System.out.println(" ");
 	System.out.println("Complete");
 	
 }
@@ -51,7 +52,13 @@ public static void FooBarBaz() {
 }
 
 public static void primePrinter() {
-	System.out.println("ChappedButtchecks");
+	int y;
+	for (y=2; y<=230;y++)
+	{
+		if (isPrime(y))
+		
+			System.out.print(y+" ");
+	}
 }
 
 
@@ -60,6 +67,8 @@ public static boolean isPrime(int num) {
 	if (num==2) 
 		return true;
 	if (2 > num) 
+		return false;
+	if (num % 2 ==0 )
 		return false;
 	for (int x=3; num>x ; x+=2) {
 		if (num%x==0)
